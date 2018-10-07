@@ -1,0 +1,22 @@
+{
+  "name": "calendly-demo",
+  "version": "1.0.0",
+  "description": "Assignment for calendly based on using webhooks and their limited api",
+  "main": "server.mjs",
+  "scripts": {
+    "test": "test",
+    "start": "node --experimental-modules server.mjs",
+    "dev": "nodemon --experimental-modules server.mjs"
+  },
+  "author": "NT",
+  "license": "ISC",
+  "devDependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "fs-extra": "^7.0.0",
+    "mongoose": "^5.3.1",
+    "morgan": "^1.9.1",
+    "node-fetch": "^2.2.0",
+    "nodemon": "^1.18.4"
+  }
+}

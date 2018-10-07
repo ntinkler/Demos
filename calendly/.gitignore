@@ -1,0 +1,8 @@
+# server logs
+*.log
+
+# node modules
+node_modules
+
+
+
