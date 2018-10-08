@@ -1,22 +1,6 @@
-import user from '../models/userModel';
+import user from '../app/models/userModel';
 
-beforeAll(function(done) {
-    //mongoose.connect('mongodb://root:example@localhost:27017/calendly?authSource=admin', { reconnectTries: 1, useNewUrlParser: true }, done);
-});
-
-beforeEach(function(done) {
-    
-});
-
-afterEach(function() {
-
-});
-
-afterAll(() => {
-    //mongoose.connection.close();
-});
-
-test('Users require a calendly token', () => {
+test('Users require a calendly token', async () => {
     let testUser = new user();
     let result = testUser.validateSync();
     expect(result).toBeDefined();
@@ -44,7 +28,6 @@ test('Users require a cancelHook id', () => {
 });
 
 test('Users can be saved and loaded', async () => {
-    let testUser = new user({token: 'test', createHookId: 'create', cancelHookId: 'cancel'});
+    let testUser = new user({token: 'test12', createHookId: 'create21', cancelHookId: 'cancel13'});
     await testUser.save();
-    console.log('post save');
 });
