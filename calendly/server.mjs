@@ -5,7 +5,7 @@
 
 import express from 'express';
 import bodyParser from 'body-parser';
-import mongoose from 'mongoose';
+//import mongoose from 'mongoose';
 import morgan from 'morgan';
 import fs from 'fs-extra'
 import path from 'path';
@@ -13,7 +13,7 @@ import userRouter from './app/routes/userRoute';
 
 
 const app = express();  
-mongoose.connect('mongodb://root:example@localhost:27017/calendly?authSource=admin', { useNewUrlParser: true });              
+//mongoose.connect('mongodb://root:example@localhost:27017/calendly?authSource=admin', { useNewUrlParser: true });              
 
 
 app.use(bodyParser.urlencoded({ extended: true }));

@@ -4,18 +4,19 @@
   "description": "Assignment for calendly based on using webhooks and their limited api",
   "main": "server.mjs",
   "scripts": {
-    "test": "jest --runInBand --detectOpenHandles",
+    "test": "jest --runInBand",
     "start": "node --experimental-modules server.mjs",
     "dev": "nodemon --nolazy --inspect-brk=9229 --experimental-modules server.mjs"
   },
   "jest": {
+    "setupTestFrameworkScriptFile": "./tests/setup.js",
     "transform": {
       "^.+\\.m?js$": "babel-jest"
     },
     "testMatch": [
       "**/__tests__/**/*.?(m)js?(x)",
       "**/?(*.)(spec|test).?(m)js?(x)"
-      ],
+    ],
     "moduleFileExtensions": [
       "js",
       "json",
@@ -30,17 +31,13 @@
         "presets": [
           [
             "es2015",
-            {
-              "modules": false
-            }
+            { "modules": false }
           ]
         ],
         "plugins": [
           [
             "transform-es2015-modules-commonjs",
-            {
-              "spec": true
-            }
+            { "spec": true }
           ]
         ]
       }
@@ -57,7 +54,7 @@
     "express": "^4.16.3",
     "fs-extra": "^7.0.0",
     "jest": "^23.6.0",
-    "mongoose": "^5.3.1",
+    "mongoose": "4.7.6",
     "morgan": "^1.9.1",
     "node-fetch": "^2.2.0",
     "nodemon": "^1.18.4"
