@@ -7,17 +7,10 @@ const userSchema = new schema({
     token: {type: String, required: true}
 })
 
-userSchema.methods.createHooks = function(hookService) {
-    hookService.checkHooks(this.token)
-
-    .then((res) => {
-        console.log(res);
-        return hookService.createHooks(this.token);
-    })
-
-    .then((res) => {
-        console.log(res);
-    });
+userSchema.methods.createHooks = async function(hookService) {
+    var hooks = await hookService.createHooks(this.token);
+    this.createHookId = hooks.createdHook.hookId;
+    this.cancelHookId = hooks.canceledHook.hookId;
 }
 
 export default mongoose.model('user', userSchema)

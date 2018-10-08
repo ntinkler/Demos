@@ -1,4 +1,6 @@
 import user from '../app/models/userModel';
+import random from '../app/services/randomService';
+import constants from '../app/constants';
 
 test('Users require a calendly token', async () => {
     let testUser = new user();
@@ -28,6 +30,18 @@ test('Users require a cancelHook id', () => {
 });
 
 test('Users can be saved and loaded', async () => {
-    let testUser = new user({token: 'test12', createHookId: 'create21', cancelHookId: 'cancel13'});
+    var fakeUser = {
+        token: constants.Test.AuthToken,
+        createHookId: `${random.Int()}`,
+        cancelHookId: `${random.Int()}`
+    };
+
+    let testUser = new user(fakeUser);
     await testUser.save();
-});
+
+    var loadedUser = await user.findOne({token: fakeUser.token});
+
+    expect(loadedUser.token).toBe(fakeUser.token);
+    expect(loadedUser.createHookId).toBe(fakeUser.createHookId);
+    expect(loadedUser.cancelHookId).toBe(fakeUser.cancelHookId);
+}); 

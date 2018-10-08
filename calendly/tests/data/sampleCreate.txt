@@ -1,0 +1,73 @@
+{
+    "event": "invitee.created",
+    "time": "2018-10-08T20:03:39Z",
+    "payload": {
+        "event_type": {
+            "uuid": "FHBHWVRLWYVEL5WC",
+            "kind": "One-on-One",
+            "slug": "15min",
+            "name": "15 Minute Meeting",
+            "duration": 15,
+            "owner": {
+                "type": "users",
+                "uuid": "FACFDIZHLW2NLWBQ"
+            }
+        },
+        "event": {
+            "uuid": "FHAQEZNL5V5HJVRE",
+            "assigned_to": [
+                "Nathaniel Tinkler"
+            ],
+            "extended_assigned_to": [
+                {
+                    "name": "Nathaniel Tinkler",
+                    "email": "tinklern+test@gmail.com",
+                    "primary": true
+                }
+            ],
+            "start_time": "2018-10-09T16:00:00-04:00",
+            "start_time_pretty": "04:00pm - Tuesday, October 9, 2018",
+            "invitee_start_time": "2018-10-09T16:00:00-04:00",
+            "invitee_start_time_pretty": "04:00pm - Tuesday, October 9, 2018",
+            "end_time": "2018-10-09T16:15:00-04:00",
+            "end_time_pretty": "04:15pm - Tuesday, October 9, 2018",
+            "invitee_end_time": "2018-10-09T16:15:00-04:00",
+            "invitee_end_time_pretty": "04:15pm - Tuesday, October 9, 2018",
+            "created_at": "2018-10-08T16:03:39-04:00",
+            "location": null,
+            "canceled": false,
+            "canceler_name": null,
+            "cancel_reason": null,
+            "canceled_at": null
+        },
+        "invitee": {
+            "uuid": "ECAVJWIBM43R6MZZ",
+            "first_name": null,
+            "last_name": null,
+            "name": "NT",
+            "email": "tinklern@gmail.com",
+            "timezone": "America/New_York",
+            "created_at": "2018-10-08T16:03:39-04:00",
+            "is_reschedule": false,
+            "payments": [],
+            "canceled": false,
+            "canceler_name": null,
+            "cancel_reason": null,
+            "canceled_at": null
+        },
+        "questions_and_answers": [],
+        "questions_and_responses": {},
+        "tracking": {
+            "utm_campaign": null,
+            "utm_source": null,
+            "utm_medium": null,
+            "utm_content": null,
+            "utm_term": null,
+            "salesforce_uuid": null
+        },
+        "old_event": null,
+        "old_invitee": null,
+        "new_event": null,
+        "new_invitee": null
+    }
+}

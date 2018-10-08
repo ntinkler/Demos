@@ -4,6 +4,7 @@ import morgan from 'morgan';
 import fs from 'fs-extra'
 import path from 'path';
 import userRouter from './routes/userRoute';
+import eventRouter from './routes/eventRoute';
 import mongoose from 'mongoose';
 
 mongoose.Promise = Promise;
@@ -34,6 +35,7 @@ router.get('/', function(req, res) {
 // all of our routes will be prefixed with /api
 app.use('/api', router);
 app.use('/api/user', userRouter);
+app.use('/api/event', eventRouter);
 
 export default app;
 
