@@ -52,8 +52,10 @@ app.use('/api/user', userRouter);
 
 // START SERVER
 // =============================================================================
-app.listen(port);
-console.log('Magic happens on port ' + port);
+let server = app.listen(port);
+console.log('Lisenting on port ' + port);
+
+export default server;
 
 
 
