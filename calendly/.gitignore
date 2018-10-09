@@ -4,5 +4,6 @@
 # node modules
 node_modules
 
-
+# certs and keys
+secrets
 

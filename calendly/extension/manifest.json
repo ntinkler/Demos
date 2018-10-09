@@ -1,0 +1,7 @@
+{
+    "name": "Calendly Demo",
+    "version": "0.1",
+    "permissions": ["storage"],
+    "description": "Very simple extension to display calendly webhook information",
+    "manifest_version": 2
+}

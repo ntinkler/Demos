@@ -1,0 +1,13 @@
+apiVersion: v1
+data:
+  mongohost: mongo-service.default.svc.cluster.local
+kind: ConfigMap
+metadata:
+  creationTimestamp: 2018-10-09T04:02:19Z
+  labels:
+    app: node-demo
+  name: node-demo-config
+  namespace: default
+  resourceVersion: "18246"
+  selfLink: /api/v1/namespaces/default/configmaps/node-demo-config
+  uid: 1e292f29-cb78-11e8-b073-42010a800016

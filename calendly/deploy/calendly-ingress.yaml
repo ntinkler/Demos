@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: calendly-ingress
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: "calendly-static-ip"
+spec:
+  tls:
+    - secretName: calendly-tls-secret
+  backend:
+    serviceName: node-demo-service
+    servicePort: 8080

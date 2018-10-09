@@ -4,26 +4,26 @@ This is a small demo of registering webhooks using the calendly api. My personal
 goals for this project were as follows:
 
 goals
-* Use modern es6/7 javascript to create a simple Express web server for nodejs
-    * Requirement - Must log access details to disk
-    * Bonus - Also log errors/warnings to console
+* (DONE) Use modern es6/7 javascript to create a simple Express web server for nodejs 
+    * (DONE) Requirement - Must log access details to disk 
+    * (DONE) Bonus - Also log errors/warnings to console 
 
-* Serve the project on one of  AWS/Azure/GCE for less than a dollar a day
-    * Bonus - debug/test without any external resources (all local)
-    * Bonus - deploy using Kubernetes (K8s)
+* (DONE) Serve the project on one of  AWS/Azure/GCE for less than a dollar a day 
+    * (DONE) Bonus - debug/test without any external resources (all local) 
+    * (DONE) Bonus - deploy using Kubernetes (K8s) (DONE)
 
-*  Support debugging using VS Code. 
-    * Requirement - breakpoints and variable values
-    * Bonus - Launch directly from vs code instead of attaching
+* (DONE) Support debugging using VS Code. 
+    * (DONE) Requirement - breakpoints and variable values
+    * (DONE) Bonus - Launch directly from vs code instead of attaching
 
-* Prefer module syntax over require()
-    * Bonus - do this without using a transpiler (ex: babel)
+* (DONE) Prefer module syntax over require()
+    * (PARTIAL - Tests require transpiler) Bonus - do this without using a transpiler (ex: babel)
 
-* Successfully test the project with a well-known framework
+* (DONE) Successfully test the project with a well-known framework
 
-* Use MongoDb as the data store
+* (DONE) Use MongoDb as the data store
 
-* Create a minimal extension that polls the web service and displays user feedback
+* (NOT DONE - Time restrictions) Create a minimal extension that polls the web service and displays user feedback
 
 ## Getting Started
 
@@ -55,7 +55,7 @@ The project itself is hosted on port __8080__.  For sample requests please see t
 
 Every now and then mongo does not come up quickly enough to accept connections from node-demo or node-test.  If this happens break the docker-compose up command into these two pieces
 
-`docker-compose up mongo -d`
+`docker-compose up -d mongo`
 
 wait 10ish seconds.
 
@@ -81,11 +81,11 @@ To build locally you must install dependencies
 
 Then you must start the required mongo instance.
 
-`docker-compose up mongo -d`
+`docker-compose up -d mongo`
 
 You can optionally start the mongo-express instance to get a nice GUI for monitoring mongo at localhost:8081
 
-`docker-compose up mongo-express -d`
+`docker-compose up -d mongo-express`
 
 afterwards you can build the project by running the npm start script
 
@@ -107,7 +107,7 @@ To run tests locally you must install required dependencies
 
 Then start mongo with
 
-`docker-compose up mongo -d`
+`docker-compose up -d mongo`
 
 and then run the tests script from package.json
 
