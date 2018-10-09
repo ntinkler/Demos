@@ -1,6 +1,25 @@
 version: '3'
 
 services:
+  node-test:
+    build: .
+    depends_on:
+      - mongo
+      - mongo-express
+    environment:
+      - mongohost=mongo
+    command: npm test
+
+  node-demo:
+    build: .
+    depends_on:
+      - mongo
+      - mongo-express
+    environment:
+      - mongohost=mongo
+    ports:
+      - 8080:8080
+
   mongo:
     image: mongo
     restart: always

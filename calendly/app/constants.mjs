@@ -15,7 +15,7 @@ constants.Test.DbName = 'calendly_test';
 constants.Test.AuthToken = 'NLAHNAHAAMAQ6QIOLYTATYEXJQQJOPWG';
 constants.Test.FakeAuthToken = 'fake';
 
-constants.Test.TestUri = 'https://tinklertest.ngrok.io';
+constants.Test.TestUri = 'http://localhost:8087';
 
 
 export default constants;
