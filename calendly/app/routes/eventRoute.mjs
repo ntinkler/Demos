@@ -27,6 +27,11 @@ eventRouter
         } else {
             results = await event.find({userToken: req.params.token, processed: false, changedAt: {"$gte": start, "$lt": end}});
         }
+
+        for(let i = 0; i < results.length; i++) {
+            results[i].processed = true;
+            await results[i].save();
+        }
         
         res.json(results);
     })

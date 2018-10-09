@@ -6,13 +6,18 @@ import mongoose from 'mongoose';
 import morgan from 'morgan';
 import fs from 'fs-extra';
 import path from 'path';
+import cors from 'cors';
 
 mongoose.Promise = Promise;
 
 const app = express(); 
 
+app.use(cors());
+
 // log to console
-app.use(morgan('dev'));
+app.use(morgan('dev', {
+    skip: function(req, res) { return req.originalUrl === '/' }
+}));
   
 // log to access.log
 fs.ensureFileSync('access.log');
@@ -35,6 +40,7 @@ app.use('/', router);  // GCE load balencers use / as the default healthcheck...
 app.use('/api', router);
 app.use('/api/user', userRouter);
 app.use('/api/event', eventRouter);
+
 
 export default app;
 

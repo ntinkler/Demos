@@ -1,7 +1,11 @@
 {
     "name": "Calendly Demo",
     "version": "0.1",
-    "permissions": ["storage"],
+    "permissions": ["storage", "alarms", "notifications"],
     "description": "Very simple extension to display calendly webhook information",
-    "manifest_version": 2
+    "manifest_version": 2,
+    "background": {
+        "scripts": ["notifier.js"],
+        "persistent": false
+    }
 }
