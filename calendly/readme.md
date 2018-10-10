@@ -23,7 +23,7 @@ goals
 
 * (DONE) Use MongoDb as the data store
 
-* (NOT DONE - Time restrictions) Create a minimal extension that polls the web service and displays user feedback
+* (DONE) Create a minimal extension that polls the web service and displays user feedback
 
 ## Getting Started
 
